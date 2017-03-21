@@ -5,9 +5,11 @@ import sys
 import subprocess
 import argparse
 
+home = os.path.expanduser("~")
+
 direction = 1
 screens = ['left', 'normal', 'right', 'inverted']
-state_file = '/home/ryan/src/python_scripts/.screen_state'
+state_file = os.path.join(home,'.config/i3/screen_state')
 
 def get_state():
     """
