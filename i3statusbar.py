@@ -1,7 +1,10 @@
 from i3pystatus import Status
+import os
+
+home = os.path.expanduser("~")
 
 status = Status(
-    logfile='/home/ryan/.config/i3/log/i3pystatus.log',
+    logfile=os.path.join(home,'.config/i3/log/i3pystatus.log'),
     logformat='%(asctime)s %(levelname)s:',
 )
 
